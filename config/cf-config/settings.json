@@ -1,0 +1,6 @@
+{
+    "type": "cf",
+    "apiKey": "$creds.cf_api_key",
+    "apiSecret": "$creds.cf_api_secret",
+    "contestId": 597634
+}

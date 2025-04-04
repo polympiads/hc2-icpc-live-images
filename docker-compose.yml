@@ -1,0 +1,22 @@
+services:
+  clics:
+    image: polympiads/hc2/clics-api
+    ports:
+      - 25301:25301
+    command: server -p 25301 --config-directory=/config/cf-config --creds=/config/creds.json
+    volumes:
+      - ./config:/config
+  stream:
+    image: polympiads/hc2/stream-admin
+    ports:
+      - 25302:25302
+    command: -p 25302 --config-directory=/config/use-clics --creds=/config/creds.json
+    volumes:
+      - ./config:/config
+  balloons:
+    image: polympiads/hc2/balloons
+    ports:
+      - 25303:25303
+    command: -p 25303 --config-directory=/config/use-clics --creds=/config/creds.json
+    volumes:
+      - ./config:/config

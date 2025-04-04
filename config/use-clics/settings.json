@@ -1,0 +1,10 @@
+{
+    "type": "clics",
+    "feeds": [
+      {
+        "source": "http://host.docker.internal:25301/clics/api",
+        "contestId": "contest",
+        "feedVersion": "2023_06"
+      }
+    ]
+}
