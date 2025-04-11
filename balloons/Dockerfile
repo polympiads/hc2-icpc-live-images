@@ -9,5 +9,6 @@ COPY ./build-balloons.sh ./build.sh
 RUN bash ./build.sh
 
 COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
